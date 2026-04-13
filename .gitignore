@@ -1,41 +1,11 @@
-# Prerequisites
-*.d
+#include <algorithm>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+double findMedian(int arr[], int n) {
+    sort(arr, arr + n);
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+    if (n % 2 == 0)
+        return (arr[n/2 - 1] + arr[n/2]) / 2.0;
+    else
+        return arr[n/2];
+}
+//排序後取中位數
