@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <iomanip>
 using namespace std;
-
 // 用來同時儲存數值與權重
 struct Item {
     int x;
